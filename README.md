@@ -1,6 +1,6 @@
 # PolicyDesk
 **AI-Powered Healthcare Policy Understanding**  
-Cotiviti Hackathon 2024 — Topic 3: Content Management in Healthcare
+Cotiviti Hackathon — Topic 3: Content Management in Healthcare
 
 ---
 
@@ -11,7 +11,6 @@ All submission files are in the `assessment_submission/` folder:
 | File | Description |
 |------|-------------|
 | `Report.pdf` | Written report (2 pages + bibliography) |
-| `Report.tex` | LaTeX source for the report |
 | `PolicyDesk_Deck.pptx` | 8-slide PowerPoint presentation |
 | `Presentation_Recording.mp4` | Video walkthrough of the slide deck with narration |
 | `DemoPOC.mp4` | Screen share demo of the live PolicyDesk application |
