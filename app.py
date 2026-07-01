@@ -475,9 +475,6 @@ elif MODE == "🔍  Policy Diff":
         order = {"High": 0, "Medium": 1, "Low": 2}
         changes = sorted(result.get("changes", []), key=lambda c: order.get(c.get("impact", "Low"), 3))
 
-        IMPACT_ICON = {"High": "🔴", "Medium": "🟡", "Low": "🟢"}
-        TYPE_ICON   = {"Added": "➕", "Removed": "➖", "Modified": "✏️"}
-
         for ch in changes:
             impact = ch.get("impact", "Low")
             ctype  = ch.get("change_type", "Modified")
@@ -485,7 +482,7 @@ elif MODE == "🔍  Policy Diff":
             type_badge = f'<span class="badge-{ctype.lower()}">{ctype}</span>'
 
             with st.expander(
-                f"{IMPACT_ICON.get(impact,'⚪')} {TYPE_ICON.get(ctype,'•')}  {ch.get('section','')}"
+                f"{impact}  ·  {ctype}  ·  {ch.get('section','')}"
             ):
                 st.markdown(f"{imp_badge} &nbsp; {type_badge}", unsafe_allow_html=True)
                 st.markdown(f"**{ch.get('description','')}**")
@@ -550,22 +547,40 @@ elif MODE == "⚙️  Policy-to-Rules":
 
             st.markdown('<hr class="divider">', unsafe_allow_html=True)
 
-            ACTION_BADGE = {"APPROVE": "badge-approve", "DENY": "badge-deny", "FLAG_FOR_REVIEW": "badge-flag"}
-            ACTION_ICON  = {"APPROVE": "✅", "DENY": "❌", "FLAG_FOR_REVIEW": "⚠️"}
+            ACTION_COLORS = {
+                "APPROVE":        {"bg": "#D4EDDA", "border": "#1E7E34", "label_color": "#065F46"},
+                "DENY":           {"bg": "#FDECEA", "border": "#C0392B", "label_color": "#991B1B"},
+                "FLAG_FOR_REVIEW":{"bg": "#FFF3CD", "border": "#856404", "label_color": "#92400E"},
+            }
+            ACTION_LABEL = {"APPROVE": "Approve", "DENY": "Deny", "FLAG_FOR_REVIEW": "Flag for Review"}
 
             for rule in result:
                 action = rule.get("action", "FLAG_FOR_REVIEW")
-                with st.expander(
-                    f"{ACTION_ICON.get(action,'•')}  {rule.get('rule_id','')} — {rule.get('description','')}"
-                ):
-                    st.markdown(
-                        f'<span class="{ACTION_BADGE.get(action,"badge-flag")}">{action}</span>'
-                        f'<span style="color:var(--text-muted);font-size:0.78rem;margin-left:8px">'
-                        f'Priority {rule.get("priority","")}</span>',
-                        unsafe_allow_html=True,
-                    )
-                    st.markdown(f"**Condition:** {rule.get('condition','')}")
-                    st.markdown(f"**Rationale:** {rule.get('rationale','')}")
+                label  = ACTION_LABEL.get(action, action)
+                c      = ACTION_COLORS.get(action, ACTION_COLORS["FLAG_FOR_REVIEW"])
+                st.markdown(f"""
+                <details style="border:1px solid {c['border']};border-radius:8px;margin-bottom:8px;overflow:hidden">
+                  <summary style="background:{c['bg']};padding:0.7rem 1.1rem;cursor:pointer;
+                                  display:flex;align-items:center;gap:8px;list-style:none">
+                    <span style="font-weight:700;font-size:0.82rem;color:{c['label_color']};
+                                 text-transform:uppercase;letter-spacing:0.5px;min-width:90px">{label}</span>
+                    <span style="color:#4A5568;font-size:0.88rem;font-weight:500">
+                      {rule.get('rule_id','')} &mdash; {rule.get('description','')}
+                    </span>
+                    <span style="margin-left:auto;color:#718096;font-size:0.76rem;white-space:nowrap">
+                      Priority {rule.get('priority','')}
+                    </span>
+                  </summary>
+                  <div style="padding:0.9rem 1.2rem;background:#fff;border-top:1px solid {c['border']}20">
+                    <p style="margin:0.3rem 0;font-size:0.87rem;color:#1A2744">
+                      <strong>Condition:</strong> {rule.get('condition','')}
+                    </p>
+                    <p style="margin:0.5rem 0 0.1rem;font-size:0.87rem;color:#4A5568">
+                      <strong>Rationale:</strong> {rule.get('rationale','')}
+                    </p>
+                  </div>
+                </details>
+                """, unsafe_allow_html=True)
 
             with st.expander("Raw JSON"):
                 st.json(result)
@@ -634,9 +649,9 @@ elif MODE == "🩺  Claim Review Copilot":
         summary    = result.get("summary", "")
 
         VERDICTS = {
-            "PASS": ("verdict-pass", "✅ Pass"),
-            "FLAG": ("verdict-flag", "⚠️ Flag for Review"),
-            "DENY": ("verdict-deny", "❌ Deny"),
+            "PASS": ("verdict-pass", "Pass"),
+            "FLAG": ("verdict-flag", "Flag for Review"),
+            "DENY": ("verdict-deny", "Deny"),
         }
         css, label = VERDICTS.get(decision, ("verdict-flag", "⚠️ Flag"))
 
@@ -657,7 +672,10 @@ elif MODE == "🩺  Claim Review Copilot":
             section("Rule evaluation")
             for r in result.get("reasons", []):
                 met  = r.get("met", False)
-                with st.expander(f"{'✅' if met else '❌'}  {r.get('rule', '')}"):
+                label = "Met" if met else "Not met"
+                badge_cls = "badge-approve" if met else "badge-deny"
+                with st.expander(f"{label}  ·  {r.get('rule', '')}"):
+                    st.markdown(f'<span class="{badge_cls}">{label.upper()}</span>', unsafe_allow_html=True)
                     st.markdown(r.get("explanation", ""))
 
         with col_cites:

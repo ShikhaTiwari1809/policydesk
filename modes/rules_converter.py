@@ -3,20 +3,22 @@ from utils.gpt_client import call_gpt, call_gpt_chunked
 
 JSON_PROMPT = """You are building a claims adjudication rules engine.
 
-Extract every coverage rule from this policy and return a JSON array:
-[
-  {
-    "rule_id": "R001",
-    "description": "short rule name",
-    "condition": "precise clinical or admin condition that must be true",
-    "action": "APPROVE | DENY | FLAG_FOR_REVIEW",
-    "rationale": "policy basis",
-    "priority": 1
-  }
-]
+Extract every coverage rule from this policy and return a JSON object with this exact structure:
+{
+  "rules": [
+    {
+      "rule_id": "R001",
+      "description": "short rule name",
+      "condition": "precise clinical or admin condition that must be true",
+      "action": "APPROVE | DENY | FLAG_FOR_REVIEW",
+      "rationale": "policy basis",
+      "priority": 1
+    }
+  ]
+}
 
 One rule per distinct condition. APPROVE = coverage met, DENY = excluded, FLAG_FOR_REVIEW = needs human judgment.
-Order by priority (1 = evaluated first). Return only the JSON array."""
+Order by priority (1 = evaluated first). The top-level key MUST be "rules"."""
 
 PYTHON_PROMPT = """Convert this policy's coverage rules into a Python function.
 
@@ -42,18 +44,24 @@ def run_json(policy_text: str) -> list:
             system_prompt=JSON_PROMPT,
             chunks=chunk_text(policy_text),
             merge_instruction=(
-                "Merge these rule lists into one JSON array. "
-                "Renumber rule_ids from R001. Remove duplicates."
+                'Merge these rule lists into one JSON object: {"rules": [...]}. '
+                "Renumber rule_ids from R001. Remove duplicates. "
+                'The top-level key MUST be "rules".'
             ),
             json_mode=True,
             temperature=0.1,
         )
 
-    # model sometimes wraps the list in an object
+    # unwrap object → list (json_mode always returns an object, never a bare array)
     if isinstance(result, dict):
-        for key in ("rules", "coverage_rules", "items"):
+        # try known keys first
+        for key in ("rules", "coverage_rules", "items", "adjudication_rules", "coverage_rules_list"):
             if key in result and isinstance(result[key], list):
                 return result[key]
+        # fallback: return the first list value found under any key
+        for val in result.values():
+            if isinstance(val, list):
+                return val
 
     return result if isinstance(result, list) else []
 

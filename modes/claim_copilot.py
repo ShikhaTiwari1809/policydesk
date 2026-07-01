@@ -47,7 +47,3 @@ Evaluate this claim against the policy and return a JSON decision."""
         temperature=0.1,
         max_tokens=3000,
     )
-
-
-def run_batch(policy_text: str, claims: list[dict]) -> list[dict]:
-    return [run(policy_text, claim) for claim in claims]

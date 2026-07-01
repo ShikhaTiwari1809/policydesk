@@ -13,7 +13,8 @@ All submission files are in the `assessment_submission/` folder:
 | `Report.pdf` | Written report (2 pages + bibliography) |
 | `Report.tex` | LaTeX source for the report |
 | `PolicyDesk_Deck.pptx` | 8-slide PowerPoint presentation |
-| `Presentation_Recording.mp4` | Video recording of presentation and POC demo |
+| `Presentation_Recording.mp4` | Video walkthrough of the slide deck with narration |
+| `DemoPOC.mp4` | Screen share demo of the live PolicyDesk application |
 
 ---
 
@@ -47,7 +48,8 @@ policydesk/
     ├── Report.pdf
     ├── Report.tex
     ├── PolicyDesk_Deck.pptx
-    └── Presentation_Recording.mp4
+    ├── Presentation_Recording.mp4
+    └── DemoPOC.mp4
 ```
 
 ---
