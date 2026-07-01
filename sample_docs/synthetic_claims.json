@@ -1,0 +1,132 @@
+[
+  {
+    "claim_id": "CLM-2024-001",
+    "patient": {
+      "age": 58,
+      "sex": "Female",
+      "insurance": "Medicare Part B",
+      "member_id": "1EG4-TE5-MK72"
+    },
+    "provider": {
+      "name": "Spine & Pain Center of Denver",
+      "npi": "1234567890",
+      "specialty": "Pain Management",
+      "state": "CO"
+    },
+    "date_of_service": "2024-03-15",
+    "procedure_description": "Lumbar transforaminal epidural steroid injection, L4-L5 level, with fluoroscopic guidance",
+    "cpt_codes": ["64483", "77003"],
+    "diagnosis_codes": ["M54.16", "M51.16"],
+    "diagnosis_descriptions": [
+      "Radiculopathy, lumbar region",
+      "Intervertebral disc degeneration, lumbar region"
+    ],
+    "billed_amount": 1850.00,
+    "units": 1,
+    "clinical_notes": {
+      "chief_complaint": "Left leg radiculopathy and low back pain, 8/10 severity",
+      "duration_of_symptoms": "10 weeks",
+      "conservative_therapy": [
+        "Physical therapy — 8 sessions over 6 weeks (completed)",
+        "Naproxen 500mg twice daily for 8 weeks (failed — inadequate relief)",
+        "Activity modification — 6 weeks"
+      ],
+      "imaging": {
+        "type": "MRI lumbar spine",
+        "date": "2024-01-20",
+        "findings": "L4-L5 left paracentral disc herniation with compression of L5 nerve root. Moderate foraminal stenosis at L4-L5."
+      },
+      "prior_injections_in_region": 0,
+      "pain_score_before_procedure": 8,
+      "procedure_note": "Informed consent obtained. Patient placed prone. L4-L5 transforaminal approach under live fluoroscopy. Contrast confirmed epidural spread. 40mg triamcinolone + 2mL 0.25% bupivacaine injected. Patient tolerated procedure well. No complications."
+    }
+  },
+  {
+    "claim_id": "CLM-2024-002",
+    "patient": {
+      "age": 45,
+      "sex": "Male",
+      "insurance": "Blue Cross Blue Shield PPO",
+      "member_id": "BCBS-7741-XR"
+    },
+    "provider": {
+      "name": "Midwest Orthopedic Associates",
+      "npi": "9876543210",
+      "specialty": "Orthopedic Surgery",
+      "state": "IL"
+    },
+    "date_of_service": "2024-04-02",
+    "procedure_description": "Lumbar interlaminar epidural steroid injection, L5-S1",
+    "cpt_codes": ["62322"],
+    "diagnosis_codes": ["M54.4"],
+    "diagnosis_descriptions": [
+      "Lumbago with sciatica, unspecified side"
+    ],
+    "billed_amount": 1100.00,
+    "units": 1,
+    "clinical_notes": {
+      "chief_complaint": "Bilateral low back pain without radiation, 5/10 severity",
+      "duration_of_symptoms": "3 weeks",
+      "conservative_therapy": [
+        "Ibuprofen 600mg as needed for 2 weeks"
+      ],
+      "imaging": {
+        "type": "X-ray lumbar spine",
+        "date": "2024-03-28",
+        "findings": "No acute bony abnormality. Mild disc space narrowing at L5-S1."
+      },
+      "prior_injections_in_region": 0,
+      "pain_score_before_procedure": 5,
+      "procedure_note": "Interlaminar ESI performed at L5-S1 without imaging guidance. 40mg methylprednisolone injected. No complications noted."
+    }
+  },
+  {
+    "claim_id": "CLM-2024-003",
+    "patient": {
+      "age": 67,
+      "sex": "Male",
+      "insurance": "Medicare Part B",
+      "member_id": "2EG7-TX9-KL88"
+    },
+    "provider": {
+      "name": "Advanced Pain Solutions",
+      "npi": "5551234567",
+      "specialty": "Anesthesiology / Pain Management",
+      "state": "TX"
+    },
+    "date_of_service": "2024-05-10",
+    "procedure_description": "4th lumbar epidural steroid injection, same region (L3-L5), this year",
+    "cpt_codes": ["62323", "77003"],
+    "diagnosis_codes": ["M47.816", "M99.23"],
+    "diagnosis_descriptions": [
+      "Spondylosis with radiculopathy, lumbar region",
+      "Subluxation stenosis of neural canal of lumbar region"
+    ],
+    "billed_amount": 2100.00,
+    "units": 1,
+    "clinical_notes": {
+      "chief_complaint": "Worsening right leg neurogenic claudication, 7/10",
+      "duration_of_symptoms": "18 months (chronic)",
+      "conservative_therapy": [
+        "Physical therapy — 12 sessions (completed January 2024)",
+        "Gabapentin 300mg TID for 3 months",
+        "Activity modification — ongoing",
+        "Acetaminophen 500mg PRN"
+      ],
+      "imaging": {
+        "type": "MRI lumbar spine",
+        "date": "2023-11-05",
+        "findings": "Severe spinal canal stenosis at L3-L4 and L4-L5 with bilateral foraminal narrowing. Ligamentum flavum hypertrophy."
+      },
+      "prior_injections_in_region": 3,
+      "prior_injection_dates": ["2024-01-15", "2024-02-28", "2024-04-01"],
+      "prior_injection_outcomes": [
+        "Injection 1 (2024-01-15): 50% pain reduction, 6 weeks duration",
+        "Injection 2 (2024-02-28): 40% pain reduction, 4 weeks duration",
+        "Injection 3 (2024-04-01): 25% pain reduction, 3 weeks duration"
+      ],
+      "pain_score_before_procedure": 7,
+      "procedure_note": "4th lumbar ESI this year requested. Fluoroscopy guidance used. L4-L5 interlaminar approach. 40mg triamcinolone injected. Patient has diabetes mellitus type 2 — glucose check performed pre-procedure (186 mg/dL). Endocrinologist notified."
+    }
+  }
+]

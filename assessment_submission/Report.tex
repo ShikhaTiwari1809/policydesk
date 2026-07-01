@@ -1,0 +1,98 @@
+\documentclass[11pt]{article}
+\usepackage[letterpaper,margin=0.85in]{geometry}
+\usepackage{times}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+\setstretch{1.08}
+\setlength{\parindent}{0.25in}
+\setlength{\parskip}{0.35em}
+\emergencystretch=3em
+\sloppy
+\newcommand{\APARef}[1]{%
+\hangindent=0.5in
+\hangafter=1
+#1\par
+}
+\begin{document}
+\begin{center}
+    \textbf{\Large PolicyDesk: AI-Powered Healthcare Policy Understanding}\\
+    \vspace{0.25em}
+    \textbf{Content Management in Healthcare}\\
+    \vspace{0.25em}
+    Cotiviti Hackathon Report
+\end{center}
+\section*{Topic Definition}
+Healthcare content management is the structured process of collecting, organizing, versioning, interpreting, and distributing the policy documents that govern coverage, utilization management, billing, and payment decisions. In healthcare payment operations, this content includes medical coverage policies, Local Coverage Determinations (LCDs), billing and coding articles, prior authorization criteria, payer-specific clinical policies, and medical necessity guidelines. CMS defines an LCD as a Medicare Administrative Contractor determination about whether an item or service is reasonable and necessary and therefore covered within that contractor's jurisdiction (Centers for Medicare \& Medicaid Services [CMS], n.d.-a). For payers, providers, and payment integrity vendors, these documents are not merely reference materials; they are operational rules that influence claim submission, claim adjudication, appeal outcomes, and provider abrasion.
+
+The challenge is that healthcare policy content changes continuously, appears in inconsistent formats, and must be interpreted by users with different levels of clinical, coding, and regulatory expertise. A payer policy may contain narrative clinical criteria, CPT or HCPCS code references, ICD-10 diagnosis mappings, exclusions, documentation requirements, and revision history in the same document. When this information is manually reviewed, translated into rules, and distributed across multiple operational teams, delays and interpretation gaps become likely. PolicyDesk addresses this problem by using large language models (LLMs) to summarize policy documents, extract structured coverage rules, compare versions, and assist claim reviewers with policy-grounded explanations.
+
+\section*{Relevant Trends}
+Administrative overhead in healthcare transactions remains high. The 2023 CAQH Index estimated that \$89 billion was spent on administrative transactions tracked by the Index, with \$18.3 billion in potential savings available through fuller electronic adoption (CAQH, 2024). Prior authorization is a particularly costly pain point: CAQH reported that provider-side manual prior authorization averaged \$10.97 per transaction, compared with \$5.79 electronically, and identified a \$494 million annual savings opportunity from broader electronic adoption (CAQH, 2024).
+
+Denial and appeal data point to a related problem. KFF reported that HealthCare.gov qualified health plans denied 20\% of in-network claims in 2023, while fewer than 1\% of denied claims were appealed. Among appealed denials, insurers upheld 56\%, meaning a substantial share were reversed or otherwise not upheld (KFF, 2025). This does not prove that most denials are incorrect, but it does suggest that claim outcomes are difficult for consumers and providers to challenge and that clearer policy interpretation could reduce unnecessary friction for both sides.
+
+Regulatory pressure is also accelerating the need for structured policy formats. The CMS Interoperability and Prior Authorization Final Rule requires impacted payers to implement APIs that expose prior authorization requirements, documentation requirements, and request/response status, with major requirements beginning in 2027 (CMS, 2024). That mandate creates a near-term need to convert narrative policy content into machine-readable formats---exactly the problem PolicyDesk is designed to address.
+
+LLM capability has matured alongside these pressures. Research in medicine shows that LLMs can perform strongly on clinical language tasks and medical question-answering benchmarks, though careful oversight remains necessary given the safety-critical nature of medical applications (Singhal et al., 2023; Thirunavukarasu et al., 2023). Foundation model research similarly suggests that general-purpose models can support diverse clinical tasks without extensive task-specific labeling, but validation and governance are not optional (Moor et al., 2023).
+
+\section*{Opportunities for Cotiviti}
+Cotiviti's existing business already spans payment accuracy, clinical analytics, and FWA detection---the same domains where policy quality has the most direct impact on claim outcomes. Cotiviti's 360 Pattern Review offering combines prepay and postpay fraud, waste, and abuse capabilities, uses analytics to identify suspicious patterns, and includes credentialed investigative and clinical analysts in the review process (Cotiviti, 2024a, 2024b). A policy intelligence layer would complement this model by making the policy basis for payment decisions faster to access, easier to audit, and more consistently applied across review teams.
+
+Automated policy-to-rule extraction is the most direct application. Instead of relying only on analysts to manually convert payer policies into decision logic, PolicyDesk can extract coverage indications, contraindications, exclusions, documentation requirements, code mappings, and effective dates into structured JSON. Human reviewers would still approve the output, but the system could reduce first-pass drafting time and improve consistency across policies.
+
+Policy version surveillance addresses a recurring operational gap. When a payer, CMS contractor, or medical society updates a policy, an AI system can compare old and new versions, surface material changes, and flag affected codes and review workflows. Cotiviti's clients often operate across dozens of payers; automated diffing reduces the analyst hours required to stay current.
+
+Claim review assistance is where the tool is most visible to end users. A reviewer could upload or reference a policy and ask whether a claim scenario appears to meet the stated criteria. The system would return a policy-grounded explanation with direct citations to the relevant sections. It should act as a reviewer copilot---improving speed and supporting audit trails---not as an autonomous payment decision.
+
+\section*{Threats and Risk Considerations}
+The main risk is that LLMs can produce fluent but incorrect answers. In payment integrity, a hallucinated coverage criterion could lead to an inappropriate payment denial or approval. To reduce this risk, PolicyDesk should use retrieval-grounded generation, quote-level source citations, confidence scoring, and mandatory human review for any output that affects payment decisions.
+
+Privacy is another major risk. Policy-only workflows can be designed outside the PHI perimeter, but claim-specific workflows may involve protected health information. HHS guidance states that cloud service providers that create, receive, maintain, or transmit ePHI for covered entities or business associates generally require a HIPAA-compliant business associate agreement (U.S. Department of Health \& Human Services, 2022). Therefore, Cotiviti should begin with policy-only use cases and move to claim-level copilots only after security, de-identification, access control, and audit logging requirements are satisfied.
+
+There is also an explainability and provider-abrasion risk. If AI-generated policy interpretations are not transparent, providers may perceive the tool as a black-box denial engine. The safest product position is to frame PolicyDesk as a policy intelligence and reviewer-assist system, not as an autonomous adjudication engine.
+
+\section*{Strategic Recommendation}
+Cotiviti should invest in a policy intelligence layer focused first on non-PHI policy documents. The core product should support four functions: policy summarization, version diffing, structured rule extraction, and reviewer-assist question answering. Outputs should include citations, source excerpts, effective dates, policy version identifiers, and structured fields that downstream systems can consume.
+
+A second option worth evaluating is a CMS-0057 readiness module---one that converts prior authorization policies into the structured, machine-readable formats the rule will require. Payer clients facing a 2027 implementation deadline need to start somewhere; this gives Cotiviti a practical entry point that builds toward broader policy automation.
+
+Finally, Cotiviti should measure PolicyDesk against operational metrics, not model demos. Useful measures include reduction in analyst time to encode a policy, the share of extracted rules that human reviewers accept without modification, policy-related rework rates, and error rates on a held-out policy interpretation test set. With those controls in place, PolicyDesk becomes an AI investment that is straightforward to justify: the scope is bounded, the outputs are auditable, and deployment can start without touching PHI.
+
+\newpage
+\section*{References}
+\APARef{
+CAQH. (2024). \textit{2023 CAQH Index report: A new normal: How trends from the pandemic are impacting the future of healthcare administration}. Council for Affordable Quality Healthcare. \url{https://www.caqh.org/insights/caqh-index}
+}
+\APARef{
+Centers for Medicare \& Medicaid Services. (2024, January 17). \textit{CMS interoperability and prior authorization final rule CMS-0057-F}. \url{https://www.cms.gov/newsroom/fact-sheets/cms-interoperability-prior-authorization-final-rule-cms-0057-f}
+}
+\APARef{
+Centers for Medicare \& Medicaid Services. (n.d.-a). \textit{Local coverage determinations}. Retrieved June 30, 2026, from \url{https://www.cms.gov/medicare/coverage/determination-process/local}
+}
+\APARef{
+Centers for Medicare \& Medicaid Services. (n.d.-b). \textit{Medicare Coverage Database: Local coverage final LCDs by state report}. Retrieved June 30, 2026, from \url{https://www.cms.gov/medicare-coverage-database}
+}
+\APARef{
+Cotiviti. (2024a, November 18). \textit{Cotiviti to launch end-to-end healthcare fraud solution at 2024 NHCAA Annual Training Conference}. \url{https://www.cotiviti.com/press-release/cotiviti-to-launch-360-pattern-review-at-nhcaa-annual-training-conference}
+}
+\APARef{
+Cotiviti. (2024b). \textit{360 Pattern Review: Detect FWA patterns}. \url{https://www.cotiviti.com/solutions/payment-accuracy/360-pattern-review}
+}
+\APARef{
+Kaiser Family Foundation. (2025, January 27). \textit{Claims denials and appeals in ACA Marketplace plans in 2023}. \url{https://www.kff.org/private-insurance/claims-denials-and-appeals-in-aca-marketplace-plans-in-2023/}
+}
+\APARef{
+Moor, M., Banerjee, O., Abad, Z. S. H., Krumholz, H. M., Leskovec, J., Topol, E. J., \& Rajpurkar, P. (2023). Foundation models for generalist medical artificial intelligence. \textit{Nature, 616}(7956), 259--265. \url{https://doi.org/10.1038/s41586-023-05881-4}
+}
+\APARef{
+Singhal, K., Azizi, S., Tu, T., Mahdavi, S. S., Wei, J., Chung, H. W., et al. (2023). Large language models encode clinical knowledge. \textit{Nature, 620}(7972), 172--180. \url{https://doi.org/10.1038/s41586-023-06291-2}
+}
+\APARef{
+Thirunavukarasu, A. J., Ting, D. S. J., Elangovan, K., Gutierrez, L., Tan, T. F., \& Ting, D. S. W. (2023). Large language models in medicine. \textit{Nature Medicine, 29}(8), 1930--1940. \url{https://doi.org/10.1038/s41591-023-02448-8}
+}
+\APARef{
+U.S. Department of Health \& Human Services. (2022). \textit{Guidance on HIPAA and cloud computing}. Office for Civil Rights. \url{https://www.hhs.gov/hipaa/for-professionals/special-topics/health-information-technology/cloud-computing/index.html}
+}
+\end{document}

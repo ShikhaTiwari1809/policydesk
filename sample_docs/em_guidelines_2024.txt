@@ -1,0 +1,145 @@
+EVALUATION AND MANAGEMENT (E/M) SERVICES BILLING GUIDELINES
+Centers for Medicare & Medicaid Services (CMS) — MLN006764
+Effective Date: January 1, 2024
+Publication Date: November 2023
+
+===========================================================================
+OVERVIEW — 2024 UPDATES
+===========================================================================
+
+This document summarizes CMS updates to E/M billing effective January 1, 2024.
+Several important changes have been made relative to 2023 AMA guidelines,
+including new time thresholds, an updated prolonged services code, and
+clarifications to MDM requirements.
+
+===========================================================================
+SECTION 1: LEVEL SELECTION — NO CHANGE IN PATHWAY STRUCTURE
+===========================================================================
+
+The two-pathway approach (MDM or Total Time) continues in 2024.
+Physicians select the pathway that results in the appropriate level.
+
+No changes to pathway eligibility or selection rules in 2024.
+
+===========================================================================
+SECTION 2: MDM LEVELS — 2024 CLARIFICATIONS
+===========================================================================
+
+2.1 NUMBER AND COMPLEXITY OF PROBLEMS ADDRESSED — CLARIFIED
+
+NEW for 2024: "Acute illness with systemic symptoms" at Moderate MDM now
+explicitly includes:
+- COVID-19 post-acute sequelae (Long COVID) as a qualifying condition
+- Behavioral health conditions requiring a change in treatment plan,
+  when the change involves prescription medication
+
+Previously, behavioral health medication changes required a separate code.
+This alignment simplifies billing for integrated care visits.
+
+2.2 DATA — SOCIAL DETERMINANTS OF HEALTH (SDOH) ADDED
+
+NEW for 2024: Review and documentation of Social Determinants of Health
+(SDOH) — including housing instability, food insecurity, or transportation
+barriers — now counts as a data element under "review of external records
+and/or notes" for Moderate MDM level.
+
+This change aligns with CMS's health equity priorities.
+
+2.3 RISK — NO CHANGES IN 2024
+
+Risk categories and examples remain unchanged from the 2021/2023 guidelines.
+
+===========================================================================
+SECTION 3: TIME-BASED BILLING — 2024 REVISED THRESHOLDS
+===========================================================================
+
+IMPORTANT CHANGE: CMS has revised time thresholds for established patient codes
+to better reflect actual physician work. New patient codes are unchanged.
+
+Office/Outpatient E/M CPT Codes — 2024 Time Requirements:
+
+NEW PATIENT (unchanged from 2023):
+CPT 99202 — New patient, straightforward MDM — 15–29 minutes
+CPT 99203 — New patient, low MDM — 30–44 minutes
+CPT 99204 — New patient, moderate MDM — 45–59 minutes
+CPT 99205 — New patient, high MDM — 60–74 minutes
+
+ESTABLISHED PATIENT (REVISED 2024):
+CPT 99211 — Established patient (no minimum — no change)
+CPT 99212 — Established patient, straightforward MDM — 10–19 minutes (unchanged)
+CPT 99213 — Established patient, low MDM — 20–29 minutes (unchanged)
+CPT 99214 — Established patient, moderate MDM — 30–44 minutes [CHANGED: was 30–39 min]
+CPT 99215 — Established patient, high MDM — 45–59 minutes [CHANGED: was 40–54 min]
+
+Note: The increased time thresholds for 99214 and 99215 reflect updated
+physician work relative value unit (RVU) recalibration by CMS.
+
+===========================================================================
+SECTION 4: HISTORY AND PHYSICAL EXAM — NO CHANGE
+===========================================================================
+
+History and physical exam continue to NOT determine E/M level.
+Documentation of medically appropriate H&P remains required but is
+not part of the level-selection criteria. No changes in 2024.
+
+===========================================================================
+SECTION 5: DOCUMENTATION REQUIREMENTS — 2024 ADDITIONS
+===========================================================================
+
+5.1 No changes to core documentation requirements.
+
+5.2 NEW for 2024 — SDOH Screening Documentation
+If SDOH data is used as a MDM data element (see Section 2.2), the record
+must include:
+- The specific SDOH factor(s) identified
+- How the SDOH information influenced clinical decision-making or referrals
+- If a referral or resource connection was made, document the action taken
+
+5.3 Audit Risk Areas Highlighted for 2024
+- CMS Recovery Audit Contractors (RACs) have been directed to focus on
+  99215 claims billed without documentation of high MDM for established patients
+- Time documentation for 99214/99215 must reflect the new 2024 thresholds
+
+===========================================================================
+SECTION 6: PROLONGED SERVICES — 2024 CHANGES
+===========================================================================
+
+IMPORTANT CHANGE: CMS has replaced CPT 99417 with HCPCS G2212 for
+Medicare patients only, effective January 1, 2024.
+
+HCPCS G2212 — Prolonged office or other outpatient E/M service, each
+15 minutes beyond the maximum time for Level 5 E/M service.
+(Medicare billing only; non-Medicare payers may still use CPT 99417)
+
+Time thresholds for prolonged service (REVISED for 2024):
+- New patient (99205): 89+ minutes total before G2212 applies
+  [CHANGED: was 75+ minutes in 2023]
+- Established patient (99215): 69+ minutes total before G2212 applies
+  [CHANGED: was 55+ minutes in 2023; reflects new 99215 max time]
+
+Note: G2212 replaces 99417 ONLY on Medicare claims.
+Commercial payers should continue using 99417 per AMA CPT guidance.
+
+===========================================================================
+SECTION 7: TELEHEALTH E/M — 2024 EXTENSION
+===========================================================================
+
+NEW: CMS has permanently extended the following telehealth flexibilities
+for E/M services (previously temporary COVID-era waivers):
+
+- Audio-only telehealth visits are permanently covered for established
+  patients who do not have access to audio-video technology, with
+  documentation of the limitation.
+- Telehealth E/M visits for new patients are permanently allowed without
+  the prior in-person requirement.
+- Place of Service (POS) code 02 (Telehealth) applies; POS 10 (Home
+  Telehealth) for visits where patient is in their home.
+
+===========================================================================
+REFERENCES
+===========================================================================
+
+1. CMS MLN006764, "Evaluation and Management Services Guide," November 2023
+2. CMS Physician Fee Schedule 2024 Final Rule (CMS-1784-F), November 2023
+3. AMA CPT 2024 Professional Edition, E/M guidelines
+4. CMS Telehealth Services List, 2024 Update

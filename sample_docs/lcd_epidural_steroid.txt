@@ -1,0 +1,178 @@
+LOCAL COVERAGE DETERMINATION (LCD)
+Epidural Steroid Injections
+LCD ID: L36920
+Contractor: Noridian Healthcare Solutions, LLC
+Original Effective Date: 10/01/2015
+Revision Effective Date: 01/01/2024
+Status: Active
+
+===========================================================================
+COVERAGE INDICATIONS, LIMITATIONS, AND/OR MEDICAL NECESSITY
+===========================================================================
+
+I. INDICATIONS FOR COVERAGE
+
+Epidural steroid injections (ESI) are considered medically necessary and covered
+when ALL of the following criteria are met:
+
+1. The patient has a documented diagnosis of:
+   - Radiculopathy (cervical, thoracic, or lumbar) due to herniated intervertebral
+     disc, spinal stenosis, spondylosis, or degenerative disc disease, OR
+   - Spinal stenosis with neurogenic claudication
+
+2. The patient has experienced moderate-to-severe pain (numeric rating scale >= 4/10)
+   for a minimum of six (6) weeks despite conservative therapy.
+
+3. Conservative therapy must include at least TWO of the following:
+   - Physical therapy (minimum 4 sessions)
+   - Anti-inflammatory medications (oral NSAIDs, oral corticosteroids)
+   - Activity modification
+   - Chiropractic manipulation
+
+4. Clinical findings corroborate the pain generator:
+   - MRI or CT imaging within the past 12 months documenting pathology consistent
+     with the patient's symptoms
+   - Physical examination findings consistent with radiculopathy or stenosis
+     (e.g., positive straight leg raise, dermatomal sensory changes, motor weakness)
+
+5. No contraindications to the procedure are present (see Section III, Exclusions).
+
+===========================================================================
+II. CPT / HCPCS CODES
+===========================================================================
+
+The following CPT codes are covered under this LCD when medical necessity criteria
+are met:
+
+CPT 62320 — Injection, interlaminar epidural or subarachnoid; cervical or thoracic,
+             without imaging guidance
+
+CPT 62321 — Injection, interlaminar epidural or subarachnoid; cervical or thoracic,
+             with imaging guidance (fluoroscopy or CT)
+
+CPT 62322 — Injection, interlaminar epidural or subarachnoid; lumbar or sacral,
+             without imaging guidance
+
+CPT 62323 — Injection, interlaminar epidural or subarachnoid; lumbar or sacral,
+             with imaging guidance (fluoroscopy or CT)
+
+CPT 64479 — Injection, anesthetic agent and/or steroid, transforaminal epidural;
+             cervical or thoracic, single level
+
+CPT 64480 — Injection, anesthetic agent and/or steroid, transforaminal epidural;
+             cervical or thoracic, each additional level (List separately in addition
+             to code for primary procedure)
+
+CPT 64483 — Injection, anesthetic agent and/or steroid, transforaminal epidural;
+             lumbar or sacral, single level
+
+CPT 64484 — Injection, anesthetic agent and/or steroid, transforaminal epidural;
+             lumbar or sacral, each additional level (List separately in addition to
+             code for primary procedure)
+
+Imaging Guidance Codes (when applicable):
+CPT 77003 — Fluoroscopic guidance for needle placement (epidural or subarachnoid)
+CPT 77012 — CT guidance for needle placement
+
+===========================================================================
+III. LIMITATIONS AND EXCLUSIONS
+===========================================================================
+
+A. Frequency Limitations
+   - No more than THREE (3) epidural steroid injections per spinal region per
+     rolling 12-month period.
+   - A minimum interval of TWO (2) weeks between injections in the same region.
+   - No more than SIX (6) total epidural steroid injections across all spinal
+     regions per rolling 12-month period.
+
+B. Absolute Contraindications (Denials)
+   The following conditions result in automatic denial of coverage:
+   - Injection site infection or systemic infection
+   - Bleeding diathesis or anticoagulation therapy that cannot be safely managed
+     peri-procedurally
+   - Patient refusal of imaging guidance (fluoroscopy or CT is required for
+     transforaminal injections)
+   - Arachnoiditis or prior complications from epidural steroid injections that
+     represent a documented contraindication per treating physician
+
+C. Relative Contraindications (Require Additional Documentation)
+   - Diabetes mellitus: Blood glucose management plan must be documented
+   - Immunocompromised patients: Infectious disease or primary physician clearance required
+   - Pregnancy: Obstetric clearance required; epidural steroids not routinely covered
+     in pregnant patients without documented exceptional clinical need
+
+D. Non-Covered Services
+   - Injections for primary diagnosis of axial back pain without radiculopathy or
+     stenosis
+   - Trigger point injections billed under epidural codes
+   - Injections performed without a preceding conservative care trial (minimum 6 weeks)
+   - Repeat injections when prior ESI in same region showed no clinical benefit
+     (defined as <30% improvement in pain or function)
+
+===========================================================================
+IV. DOCUMENTATION REQUIREMENTS
+===========================================================================
+
+The medical record must contain ALL of the following at the time of service:
+
+1. Diagnosis and Indication
+   - ICD-10 diagnosis code consistent with the covered indication
+   - Written documentation of presenting symptoms, duration, and severity (pain score)
+
+2. Conservative Therapy Record
+   - Dates, types, and duration of conservative treatments tried and failed
+   - Physical therapy records or notes from treating therapist (if applicable)
+
+3. Imaging
+   - MRI or CT report (within 12 months) with findings corroborating the diagnosis
+   - Radiology report signed by a radiologist or interpreting physician
+
+4. Procedure Note
+   - Informed consent obtained and documented
+   - Approach used (interlaminar vs. transforaminal)
+   - Level(s) injected
+   - Agent(s) and dose(s) administered
+   - Imaging guidance used (type and documentation of real-time imaging)
+   - Patient tolerance and any immediate complications
+
+5. Outcomes Tracking (for repeat injections)
+   - Documentation of clinical response to prior injection(s)
+   - Pain scale scores before and after prior procedure(s)
+   - Functional improvement or lack thereof
+
+===========================================================================
+V. ICD-10 CODES THAT SUPPORT MEDICAL NECESSITY
+===========================================================================
+
+M47.812  — Spondylosis with radiculopathy, cervical region
+M47.816  — Spondylosis with radiculopathy, lumbar region
+M50.10   — Cervical disc degeneration, unspecified cervical region
+M51.16   — Intervertebral disc degeneration, lumbar region
+M54.12   — Radiculopathy, cervical region
+M54.16   — Radiculopathy, lumbar region
+M54.4    — Lumbago with sciatica, unspecified side
+M99.23   — Subluxation stenosis of neural canal of lumbar region
+G54.2    — Cervical root disorders, not elsewhere classified
+G54.4    — Lumbosacral root disorders, not elsewhere classified
+
+===========================================================================
+VI. BILLING AND CODING NOTES
+===========================================================================
+
+- Fluoroscopy guidance (CPT 77003) or CT guidance (CPT 77012) must be billed
+  separately when used; real-time imaging is required for transforaminal approaches.
+- Bilateral injections at the same level on the same date are payable; append
+  modifier -50 (Bilateral Procedure).
+- Injections at multiple levels on the same date: bill the primary level first,
+  then each additional level with the appropriate "add-on" code.
+- Documentation must clearly state whether imaging guidance was used to support
+  separate billing of guidance codes.
+
+===========================================================================
+REFERENCES
+===========================================================================
+
+1. CMS Internet-Only Manual, Pub. 100-08, Medicare Program Integrity Manual, Ch. 13
+2. American Society of Interventional Pain Physicians (ASIPP) Guidelines, 2020
+3. North American Spine Society (NASS) Coverage Policy Recommendations, 2022
+4. Noridian Jurisdiction D LCD L36920 (source: cms.gov/medicare-coverage-database)

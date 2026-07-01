@@ -1,0 +1,135 @@
+EVALUATION AND MANAGEMENT (E/M) SERVICES BILLING GUIDELINES
+American Medical Association (AMA) — CPT 2023 Edition
+Effective Date: January 1, 2023
+
+===========================================================================
+OVERVIEW
+===========================================================================
+
+This document summarizes the revised office/outpatient Evaluation and Management
+(E/M) guidelines effective January 1, 2021 and carried forward through 2023.
+These guidelines represent the most significant revision to E/M coding in 25 years.
+
+===========================================================================
+SECTION 1: LEVEL SELECTION — TWO PATHWAYS
+===========================================================================
+
+Physicians may choose EITHER of the following methods to select the E/M level:
+
+PATHWAY A: MEDICAL DECISION MAKING (MDM)
+Recommended primary pathway. Level is based on complexity of MDM.
+
+PATHWAY B: TOTAL TIME ON DATE OF SERVICE
+Total time includes face-to-face time AND non-face-to-face time on the day
+of the encounter (e.g., reviewing records, ordering tests, coordination).
+
+The level is determined by WHICHEVER pathway results in the higher level —
+the physician chooses which pathway to document and bill.
+
+===========================================================================
+SECTION 2: MDM LEVELS (PATHWAY A)
+===========================================================================
+
+MDM is based on THREE elements; level is determined by meeting requirements
+in AT LEAST TWO of the three elements:
+
+2.1 NUMBER AND COMPLEXITY OF PROBLEMS ADDRESSED
+- Minimal (Level 2): 1 self-limited or minor problem
+- Low (Level 3): 2+ self-limited/minor problems; OR 1 stable chronic illness;
+                 OR 1 acute, uncomplicated illness/injury
+- Moderate (Level 4): 1+ chronic illness with exacerbation/progression; OR 2+
+                      stable chronic illnesses; OR new problem with uncertain prognosis;
+                      OR undiagnosed new problem with uncertain prognosis;
+                      OR acute illness with systemic symptoms
+- High (Level 5): 1+ chronic illness with severe exacerbation; OR acute or chronic
+                  illness/injury posing threat to life or bodily function
+
+2.2 AMOUNT AND/OR COMPLEXITY OF DATA REVIEWED AND ANALYZED
+- Minimal (Level 2): Results of order(s) reviewed/noted in record
+- Low (Level 3): Review of external records OR ordering of tests/results
+- Moderate (Level 4): Review of external records AND independent interpretation
+                      of tests; OR discussion of management with external provider
+- High (Level 5): Decision requiring independent interpretation of test performed
+                  by another physician; OR decision requiring independent
+                  historian; OR selection of management option requiring independent
+                  interpretation with documented rationale
+
+2.3 RISK OF COMPLICATIONS / MORBIDITY OR MORTALITY
+- Minimal (Level 2): OTC drugs; minor surgical procedure without identified risk factors
+- Low (Level 3): Prescription drug management; minor surgery with identified risk
+                 factors; IV fluids without additives
+- Moderate (Level 4): Prescription drug management with decision about drug change;
+                      minor surgery with identified risk factors; IV drugs (other than
+                      chemo); elective major surgery without identified risk
+- High (Level 5): Drug therapy requiring intensive monitoring for toxicity; elective
+                  major surgery with identified risk factors; emergency major surgery;
+                  hospitalization; decision not to resuscitate
+
+===========================================================================
+SECTION 3: TIME-BASED BILLING (PATHWAY B) — 2023 THRESHOLDS
+===========================================================================
+
+Office/Outpatient E/M CPT Codes and Time Requirements:
+
+CPT 99202 — New patient, straightforward MDM — 15–29 minutes
+CPT 99203 — New patient, low MDM — 30–44 minutes
+CPT 99204 — New patient, moderate MDM — 45–59 minutes
+CPT 99205 — New patient, high MDM — 60–74 minutes
+
+CPT 99211 — Established patient (may not require presence of physician) — no minimum
+CPT 99212 — Established patient, straightforward MDM — 10–19 minutes
+CPT 99213 — Established patient, low MDM — 20–29 minutes
+CPT 99214 — Established patient, moderate MDM — 30–39 minutes
+CPT 99215 — Established patient, high MDM — 40–54 minutes
+
+===========================================================================
+SECTION 4: HISTORY AND PHYSICAL EXAM
+===========================================================================
+
+IMPORTANT CHANGE FROM PRIOR GUIDELINES:
+History and physical examination are NO LONGER used to determine E/M level.
+Physicians must document a medically appropriate history and physical exam
+but these elements are NOT part of the level-selection calculation.
+
+===========================================================================
+SECTION 5: DOCUMENTATION REQUIREMENTS
+===========================================================================
+
+5.1 Required in All E/M Records
+- Chief complaint or reason for visit
+- Relevant history (medically appropriate to the visit)
+- Findings of exam (medically appropriate to the visit)
+- Date of service
+- Complexity of MDM OR total time (whichever pathway used)
+- Provider signature with credentials
+
+5.2 For Time-Based Billing
+- Total time on date of service must be documented
+- A brief note explaining what was done during non-face-to-face time is advisable
+  (reviewing records, ordering tests, care coordination, etc.)
+
+5.3 Prohibited Practices
+- Copy-and-paste ("cloning") of prior notes without attestation of review
+  and any updates is considered fraudulent documentation
+- Upcoding based on a single, brief MDM element that does not meet the 2-of-3
+  threshold is an audit target
+
+===========================================================================
+SECTION 6: PROLONGED SERVICES — 2023
+===========================================================================
+
+CPT 99417 — Prolonged office or other outpatient E/M service (new or established
+patient), each 15 minutes beyond the maximum time for Level 5 E/M service.
+Bill in addition to 99205 or 99215.
+
+Maximum time thresholds before 99417 applies:
+- New patient (99205): after 74 minutes → bill 99417 for each additional 15 min
+- Established patient (99215): after 54 minutes → bill 99417 for each additional 15 min
+
+===========================================================================
+REFERENCES
+===========================================================================
+
+1. AMA CPT 2023 Professional Edition, E/M guidelines pp. 5-13
+2. CMS Physician Fee Schedule 2023 Final Rule (CMS-1770-F)
+3. AMA E/M Physician Guidelines FAQ, December 2022
