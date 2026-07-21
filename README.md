@@ -23,7 +23,7 @@ All submission files are in the `assessment_submission/` folder:
 policydesk/
 ├── app.py                        # Main Streamlit application
 ├── requirements.txt              # Python dependencies
-├── .env                          # OpenAI API key (not committed)
+├── .env                          # OpenAI API key
 ├── .gitignore
 │
 ├── modes/
@@ -96,8 +96,6 @@ OPENAI_API_KEY=your-key-here
 ```bash
 streamlit run app.py
 ```
-
-The app opens at `http://localhost:8501` in your browser.
 
 ---
 
